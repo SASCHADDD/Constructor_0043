@@ -16,14 +16,13 @@ class mahasiswa
 
         static void setNim(int pNim) { nim = pNim; }
         static int getNim() { return nim; }
-};
-
-class mahasiswa 
-    mahasiswa(string pnama);
+ 
+    mahasiswa(string pnama)
     {
         nama = pnama;
         setID();
     }
+};
 
 int mahasiswa::nim = 0;
 
@@ -44,7 +43,8 @@ int main()
 {
     mahasiswa mhs1("Sri Dadi");
     mahasiswa mhs2("Budi Jatmiko");
-    mahasiswa::setNim(9); //mengakses nim melalui static member function
+
+    mahasiswa::setNim(9);//mengakses nim melalui static member function
     mahasiswa mhs3("Andi Janu");
     mahasiswa mhs4("Joko Wahono");
 
