@@ -20,14 +20,19 @@ class Mahasiswa
 
         };
             Mahasiswa(string iNama)
-            {
+        {
                 nama = iNama;
-            }
-};
-void cetak(){
-    cout << "NIM = " << nim << endl;
-    cout << "Nama = " << nama << endl;
-    cout << endl;
+        }
+            Mahasiswa(int iNim, string iNama)
+        {
+                nim = iNim;
+                nama =  iNama;
+        }
+            void cetak(){
+            cout << "NIM = " << nim << endl;
+            cout << "Nama = " << nama << endl;
+            cout << endl;
+        }
 };
 
 int main()
@@ -37,9 +42,10 @@ int main()
     Mahasiswa mhs3("Indra");
     Mahasiswa mhs4(30, "Fauzan");
 
-    mhs1.printAll();
-    mhs2.printAll();
-    mhs3.printAll();
-    mhs4.printAll();
+    mhs1.cetak();
+    mhs2.cetak();
+    mhs3.cetak();
+    mhs4.cetak();
+    
     return 0;
 }
